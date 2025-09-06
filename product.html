@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>epv - Product</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header / Nav (same across pages) -->
+  <header>
+    <nav>
+      <a href="index.html" class="logo">
+        <img src="assets/logo.png" alt="epv logo">
+      </a>
+      <div class="menu">
+        <a href="brand.html">Brand</a>
+        <a class="active" href="product.html">Product</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Product Hero -->
+  <section class="product-hero">
+    <div class="ph-text">
+      <h1>스킨 튜닝 하이드레이션 앰플</h1>
+      <p>수분앰플과 밸런스드롭을 원하는 비율로 조합해, 피부에 맞춘 커스터마이징 케어를 완성하세요.</p>
+    </div>
+    <div class="ph-img">
+      <img src="assets/product_hero.jpg" alt="epv product hero">
+    </div>
+  </section>
+
+  <main class="container">
+    <!-- Overview -->
+    <section class="p-overview">
+      <div class="p-img">
+        <img src="assets/product_set.jpg" alt="epv product set">
+      </div>
+      <div class="p-copy">
+        <h2>내 피부를 위한 <span>유수분 밸런스</span></h2>
+        <p>
+          수분앰플로 촘촘히 채우고,<br>
+          밸런스드롭으로 편안하게 균형을 맞춥니다.
+        </p>
+        <!-- 불릿(Personalization/Balance/Simplicity) 제거됨 -->
+      </div>
+    </section>
+
+    <!-- How to use (Flow ver.) -->
+<section class="howto howto-flow">
+  <h3>How to use</h3>
+
+  <ol class="flow">
+    <!-- STEP 1 -->
+    <li class="flow-step">
+      <div class="step-badge">step 1</div>
+      <h4>내 피부 타입 확인</h4>
+      <p class="desc">간단 테스트로 가이드를 받아보세요.</p>
+      <a
+        class="btn-primary"
+        href="https://epv-skincare.github.io/epv-skin-test/"  <!-- TODO: 실제 테스트 링크로 교체 -->
+         
+      피부타입 테스트 바로가기</a>
+      <p class="note">이미 알고 계시다면 바로 2단계로 넘어가셔도 좋아요.</p>
+    </li>
+
+    <!-- STEP 2 -->
+    <li class="flow-step">
+      <div class="step-badge">step 2</div>
+      <h4>가이드 라인에 맞춰 커스터마이징</h4>
+
+      <ul class="mix-guide">
+        <li><b>지성</b><span>0.5통 이하</span></li>
+        <li><b>복합성/수부지</b><span>0.5–1통</span></li>
+        <li><b>약한 건성</b><span>1–2통</span></li>
+        <li><b>보통 건성</b><span>2–3통</span></li>
+        <li><b>심한 건성</b><span>3–4통</span></li>
+        <li><b>극건성</b><span>4통 이상</span></li>
+      </ul>
+
+      <p class="note">밸런스드롭을 수분앰플에 위 비율대로 섞어 사용하세요. 개인 기호에 맞게 조금씩 조절해도 좋습니다.</p>
+    </li>
+
+    <!-- STEP 3 -->
+    <li class="flow-step">
+      <div class="step-badge">step 3</div>
+      <h4>잘 흔들어서 사용!</h4>
+      <p class="desc">충분히 섞은 뒤 얼굴에 고르게 펴 바릅니다. 번거로우시면 앰플과 드롭을 따로 사용해도 무방합니다 🙂</p>
+    </li>
+  </ol>
+</section>
+
+    <!-- Ingredients highlight -->
+    <section class="ingredients">
+      <div class="col">
+        <h3>수분앰플</h3>
+        <ul>
+          <li>히알루론산 · 트레할로스 — 수분 충전</li>
+          <li>판테놀 · 알란토인 — 진정 케어</li>
+          <li>프리미엄 펩타이드 5종 — 탄력 & 활력</li>
+          <li>바쿠치올 · 아데노신 · 나이아신아마이드 — 톤·결 개선</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h3>밸런스드롭</h3>
+        <ul>
+          <li>스쿠알란 · 골든 호호바씨 — 가볍고 산뜻한 흡수</li>
+          <li>살구씨오일 · 동백오일 · 카렌둘라꽃오일 — 영양 & 보호</li>
+          
+        </ul>
+      </div>
+    </section>
+
+    <!-- What's included -->
+    <section class="included">
+      <h3>구성</h3>
+      <div class="inc-grid">
+        <div class="inc-card">
+          <h4>수분앰플</h4>
+          <p>히알루론산/트레할로스/펩타이드5종 복합</p>
+        </div>
+        <div class="inc-card">
+          <h4>밸런스드롭</h4>
+          <p>스쿠알란/호호바/살구씨/동백/카렌둘라 오일 블렌드</p>
+        </div>
+        <div class="inc-card">
+          <h4>설명서</h4>
+          <p>피부타입별 추천 비율 가이드</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p>© 2025 epv. All rights reserved.</p>
+      <p>
+        문의: jjiho980610@naver.com |
+        <a href="https://www.instagram.com/epv.official/" target="_blank">Instagram</a> ·
+        <a href="https://www.threads.com/@epv.official" target="_blank">Threads</a> ·
+        <a href="https://www.wadiz.kr/web/wcomingsoon/rwd/344544" target="_blank">Wadiz</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
+

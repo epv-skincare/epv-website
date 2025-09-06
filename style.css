@@ -1,0 +1,529 @@
+/* =========================
+   Base / Global
+========================= */
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Pretendard',sans-serif}
+body{line-height:1.6;color:#222}
+
+/* =========================
+   Header / Nav
+========================= */
+header{position:sticky;top:0;width:100%;background:#fff;display:flex;justify-content:center;align-items:center;border-bottom:1px solid #eee;z-index:1000}
+nav{display:flex;justify-content:space-between;align-items:center;width:90%;max-width:1200px;padding:15px 0}
+.logo img{height:60px;width:auto}
+.menu a{margin-left:20px;text-decoration:none;color:#000;font-weight:500}
+.menu a:hover{color:#FFC21A}
+
+/* =========================
+   HOME
+========================= */
+.hero{
+  height:100vh;background:url('assets/hero.jpg') center/cover no-repeat;
+  display:flex;flex-direction:column;justify-content:center;align-items:center;
+  text-align:center;color:#fff;
+}
+.hero h1{font-size:5rem;font-weight:700;margin-bottom:10px}
+.hero p{font-size:2.5rem}
+
+.about{background:#fff;padding:100px 20px;text-align:center}
+.about h2{font-size:2.5rem;font-weight:700;margin-bottom:20px}
+.about .highlight{color:#FFC21A}
+.about p{max-width:700px;margin:0 auto 10px;font-size:1.6rem;color:#444}
+
+.last{
+  height:80vh;background:url('assets/last.jpg') center/cover no-repeat;
+  display:flex;align-items:center;padding-left:10%;
+}
+.last h2{font-size:3rem;font-weight:700;color:#000}
+.last-img-mobile{display:none}
+
+/* =========================
+   Footer
+========================= */
+footer{background:#111;color:#fff;text-align:center;padding:30px 20px;font-size:.9rem;margin-top:50px}
+footer a{color:#FFC21A;text-decoration:none;margin:0 5px}
+footer a:hover{text-decoration:underline}
+
+/* =========================
+   Brand – Common
+========================= */
+.page-hero{padding:80px 20px 40px;text-align:center;background:#fff}
+.page-hero h1{font-size:2.2rem;font-weight:800}
+.page-hero p{margin-top:10px;color:#555}
+.container{width:90%;max-width:1200px;margin:0 auto}
+
+.brand-philo{
+  display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:60px 0
+}
+.brand-philo .kicker{color:#FFC21A;font-weight:700;margin-bottom:10px;text-transform:uppercase}
+.brand-philo h2{font-size:2rem;margin-bottom:16px}
+.brand-philo p{color:#444;font-size:1.05rem}
+.brand-philo .imgbox{border-radius:24px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.06)}
+.brand-philo .imgbox img{width:100%;height:100%;object-fit:cover}
+
+/* =========================
+   Brand – Timeline (center line + stack)
+========================= */
+.timeline{
+  position:relative;width:min(760px,92%);margin:80px auto;
+  display:grid;row-gap:48px;justify-items:center;
+}
+.timeline .kicker{
+  color:#FFC21A;font-weight:700;text-transform:uppercase;font-size:.95rem;
+  margin-bottom:8px;text-align:center
+}
+.timeline::before{
+  content:"";position:absolute;top:36px;bottom:110px;
+  left:50%;transform:translateX(-50%);width:2px;background:#eee;
+}
+.timeline-item{position:relative;width:100%;display:flex;justify-content:center;align-items:center}
+.timeline-content{
+  width:min(640px,100%);background:#fff;border-radius:12px;padding:22px;text-align:center;
+  box-shadow:0 8px 28px rgba(0,0,0,.06)
+}
+.timeline h3{font-size:1.15rem;margin-bottom:6px;font-weight:700}
+.timeline p{color:#555;font-size:.95rem}
+.timeline .mission{
+  margin-top:4px;text-align:center;font-weight:700;font-size:1.2rem;
+  white-space:normal;word-break:keep-all;overflow-wrap:anywhere;line-height:1.5;padding:0 8px;
+}
+.nowrap{white-space:nowrap}
+
+/* =========================
+   Brand – Values (USP)
+========================= */
+.usp{margin:80px auto 100px}
+.usp .kicker{color:#FFC21A;font-weight:700;text-transform:uppercase;font-size:.95rem}
+.usp-title{margin:10px 0 22px;font-size:1.6rem;text-align:left}
+.usp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.usp-card{background:#fff;border:1px solid #f0f0f0;border-radius:20px;padding:24px;box-shadow:0 10px 24px rgba(0,0,0,.04);transition:.2s}
+.usp-card:hover{transform:translateY(-4px);box-shadow:0 16px 36px rgba(0,0,0,.06);background:#FFF8E1}
+.usp-icon{width:40px;height:40px;display:inline-flex;align-items:center;justify-content:center;border-radius:12px;background:#FFF4CC;margin-bottom:14px}
+.usp h4{font-size:1.1rem;margin-bottom:8px}
+.usp p{color:#555;font-size:.98rem}
+
+/* =========================
+   Product
+========================= */
+.product-hero{
+  display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center;
+  padding:60px 5%;background:linear-gradient(180deg,#ffffff 0%,#f9fafb 100%);border-bottom:1px solid #f1f1f1
+}
+.product-hero h1{font-size:2.2rem;line-height:1.2;margin-bottom:10px}
+.product-hero p{color:#444;font-size:1.05rem}
+.product-hero .ph-img img{width:100%;height:100%;object-fit:cover;border-radius:24px;box-shadow:0 10px 30px rgba(0,0,0,.06)}
+.ph-text{max-width:620px}
+
+.p-overview{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center;padding:60px 0}
+.p-overview .p-img img{width:100%;border-radius:24px;box-shadow:0 10px 30px rgba(0,0,0,.06)}
+.p-overview h2{font-size:1.8rem;margin-bottom:12px}
+.p-overview h2 span{color:#FFC21A}
+.p-overview p{color:#444;margin-bottom:12px}
+
+.howto{padding:30px 0 60px}
+.howto h3{font-size:1.4rem;margin-bottom:16px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.step{background:#fff;border:1px solid #f0f0f0;border-radius:16px;padding:18px;box-shadow:0 10px 20px rgba(0,0,0,.04)}
+.step .num{width:36px;height:36px;border-radius:50%;background:#FFC21A;color:#000;display:flex;align-items:center;justify-content:center;font-weight:700;margin-bottom:10px}
+
+/* Ingredients */
+.ingredients{
+  display:grid;grid-template-columns:1fr 1fr;gap:24px;padding:50px 0;
+  border-top:1px solid #f1f1f1;border-bottom:1px solid #f1f1f1;background:#fff
+}
+.ingredients h3{margin-bottom:10px}
+.ingredients ul{padding-left:18px}
+.ingredients li{margin:6px 0;color:#444}
+
+.included{padding:50px 0 80px}
+.included h3{font-size:1.4rem;margin-bottom:16px}
+.inc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.inc-card{background:#fff;border:1px solid #f0f0f0;border-radius:16px;padding:18px;box-shadow:0 10px 20px rgba(0,0,0,.04)}
+.inc-card h4{margin-bottom:6px}
+
+/* =========================
+   Responsive
+========================= */
+/* Tablet */
+@media (max-width:980px){
+  nav{padding:12px 0}
+  .logo img{height:36px}
+  .menu a{margin-left:14px}
+  h1,.hero h1,.product-hero h1{font-size:2rem}
+  h2{font-size:1.6rem}
+  h3{font-size:1.2rem}
+  p{font-size:1rem}
+  .product-hero,.brand-philo,.p-overview,.ingredients{grid-template-columns:1fr !important;text-align:center}
+  .ph-img img,.brand-philo .imgbox img,.p-overview .p-img img{width:100%;height:auto;object-fit:cover}
+  .usp-grid{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  .inc-grid{grid-template-columns:1fr}
+}
+
+/* Mobile */
+@media (max-width:768px){
+  nav{flex-direction:column;align-items:flex-start;row-gap:8px}
+  .menu{display:flex;column-gap:16px;row-gap:6px;flex-wrap:wrap}
+  .menu a{margin-left:0;font-size:.95rem}
+
+  .hero{height:70vh;padding:0 20px}
+  .hero h1{font-size:1.8rem;line-height:1.3;margin-bottom:8px}
+  .hero p{font-size:1rem}
+
+  .about{padding:40px 16px 28px}
+  .about h2{font-size:clamp(1.3rem,4.8vw,1.8rem);line-height:1.25;letter-spacing:-0.01em;font-weight:700;margin-bottom:10px}
+  .about .highlight{font-size:clamp(1.1rem,4.5vw,1.4rem);line-height:1.2}
+  .about p{font-size:clamp(0.95rem,3.7vw,1.05rem);line-height:1.7;color:#333;max-width:560px;margin:6px auto;word-break:keep-all;text-wrap:balance}
+
+  .last{height:auto;background:none;padding:28px 16px 36px;flex-direction:column;align-items:flex-start}
+  .last h2{font-size:1.4rem;line-height:1.4;margin-bottom:12px;max-width:100%;word-break:keep-all}
+  .last-img-mobile{display:block;width:100%;height:auto;border-radius:12px;box-shadow:0 10px 24px rgba(0,0,0,.06)}
+
+  .page-hero{padding:56px 16px 28px}
+  .brand-philo{padding:36px 0}
+
+  /* 타임라인 중앙선/카드 중앙 유지 */
+  .timeline{width:90%;row-gap:28px}
+  .timeline::before{left:50%;transform:translateX(-50%);bottom:120px}
+  .timeline-item{justify-content:center}
+  .timeline-content{max-width:560px;text-align:center}
+  .timeline .mission{font-size:1.05rem}
+  .usp-title{text-align:center}
+
+  .product-hero{padding:36px 16px}
+  .ph-text{max-width:unset}
+  .p-overview{padding:36px 0}
+
+  /* ⭐ Ingredients 모바일: 왼쪽 정렬 & 가독성 향상 */
+  .ingredients{
+    padding:20px 16px;           /* 좌우 여백 확보 */
+    text-align:left;              /* 전체 왼쪽 정렬 */
+    grid-template-columns:1fr;    /* 한 줄로 */
+  }
+  .ingredients h3{
+    text-align:left;
+    font-size:1.1rem;
+    margin:8px 0 10px;
+  }
+  .ingredients ul{padding-left:18px;margin-bottom:20px}
+  .ingredients li{font-size:.95rem;line-height:1.5;margin-bottom:6px}
+}
+
+/* Small phones */
+@media (max-width:640px){
+  .hero h1,.product-hero h1{font-size:1.6rem}
+  .hero p,.product-hero p{font-size:.95rem}
+  h2{font-size:1.35rem}
+  .usp h4{font-size:1rem}
+  .usp p,.ingredients li,.p-overview p{font-size:.95rem}
+  .timeline-content{max-width:520px}
+  .timeline .mission{font-size:1rem}
+}
+
+/* iOS safe-area */
+@supports(padding:max(0px)){
+  header{padding-left:max(0px,env(safe-area-inset-left));padding-right:max(0px,env(safe-area-inset-right))}
+  body{padding-bottom:max(0px,env(safe-area-inset-bottom))}
+}
+
+/* 텍스트 잘림 전역 보호 */
+h1,h2,h3,h4,p,.mission,.last h2{word-break:keep-all;overflow-wrap:anywhere}
+img,video{max-width:100%;height:auto;display:block}
+.timeline-content{width:min(640px,calc(100% - 32px));padding:22px}
+.timeline{position:relative}
+.timeline::before{left:50%;transform:translateX(-50%)}
+.timeline .mission{padding:0 16px;line-height:1.5}
+.last h2{white-space:normal;line-height:1.28}
+@media (max-width:768px){
+  .about,.page-hero,.timeline,.last{padding-left:16px;padding-right:16px}
+  .timeline{width:100%}
+  .timeline::before{left:50%;transform:translateX(-50%);bottom:120px}
+  .timeline-content{width:calc(100% - 32px);margin:0 auto}
+  .last h2{font-size:1.55rem;line-height:1.32}
+}
+@media (max-width:360px){
+  .timeline-content{width:calc(100% - 28px)}
+  .last h2{font-size:1.45rem}
+}
+
+/* ===== Desktop: Product Hero 간격 타이트하게 ===== */
+@media (min-width: 981px) {
+  .product-hero{
+    grid-template-columns: 1fr 1fr; /* 좌/우 동일 분할로 밀착감 */
+    column-gap: 16px;               /* 컬럼 간격 ↓ (기존 24px) */
+    padding-top: 40px;              /* 위아래 패딩도 살짝 ↓ */
+    padding-bottom: 40px;
+  }
+  .product-hero .ph-img{
+    justify-self: start;            /* 이미지가 오른쪽으로 뜨지 않도록 */
+  }
+  .ph-text{
+    max-width: 700px;               /* 텍스트 영역 조금 더 넓혀 간격 체감 ↓ */
+  }
+}
+/* Desktop 전용: Product Hero 텍스트 오른쪽으로 더 붙이기 */
+@media (min-width: 981px) {
+  .ph-text {
+    padding-left: 400px;   /* 텍스트 블록 오른쪽으로 이동 */
+    text-align: left;     /* 정렬은 그대로 왼쪽 */
+  }
+}
+/* =========================
+   Product – How to use (Flow ver.)
+========================= */
+.howto-flow { padding: 40px 0 64px; }
+.howto-flow h3 { font-size: 1.4rem; margin-bottom: 16px; }
+
+.flow {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.flow-step {
+  background: #fff;
+  border: 1px solid #f0f0f0;
+  border-radius: 16px;
+  padding: 18px 18px 16px;
+  box-shadow: 0 10px 20px rgba(0,0,0,.04);
+}
+
+.step-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: #FFF4CC;
+  color: #000;
+  font-weight: 700;
+  font-size: .85rem;
+  margin-bottom: 10px;
+}
+
+.flow-step h4 {
+  font-size: 1.15rem;
+  margin-bottom: 8px;
+}
+
+.flow-step .desc { color:#444; }
+.flow-step .note {
+  color: #666;
+  font-size: .95rem;
+  margin-top: 10px;
+}
+
+/* 버튼 (Step1 링크) */
+.btn-primary {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: #FFC21A;
+  color: #000;
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: 0 6px 14px rgba(255,194,26,.25);
+}
+.btn-primary:hover { filter: brightness(0.98); }
+
+/* 비율 가이드 (텍스트 표 느낌) */
+.mix-guide {
+  list-style: none;
+  border: 1px dashed #f0c96b;
+  border-radius: 12px;
+  padding: 10px 12px;
+  margin-top: 8px;
+}
+.mix-guide li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 6px 0;
+  border-bottom: 1px dashed #f3e0ab;
+}
+.mix-guide li:last-child { border-bottom: 0; }
+.mix-guide b { font-weight: 700; }
+
+/* 반응형 */
+@media (max-width: 980px) {
+  .flow { grid-template-columns: 1fr; gap: 14px; }
+  .howto-flow h3 { text-align: left; }
+  .flow-step { text-align: left; }
+}
+
+/* How to use – 항상 세로(1열) 레이아웃 */
+.howto-flow { padding: 40px 0 64px; }
+.howto-flow h3 { font-size: 1.4rem; margin-bottom: 16px; }
+
+.flow{
+  list-style:none;
+  display:grid;
+  grid-template-columns: 1fr;      /* ★ 1열 고정 */
+  gap:16px;
+  max-width: 760px;                /* 카드 최대 폭 */
+  margin: 0 auto;                  /* 가운데 정렬 */
+}
+
+.flow-step{
+  background:#fff;border:1px solid #f0f0f0;border-radius:16px;
+  padding:18px; box-shadow:0 10px 20px rgba(0,0,0,.04);
+}
+
+/* 스텝 배지/제목 */
+.step-badge{
+  display:inline-block;padding:6px 12px;border-radius:999px;
+  background:#FFF4CC;color:#000;font-weight:700;font-size:.85rem;margin-bottom:10px;
+}
+.flow-step h4{ font-size:1.15rem; margin-bottom:8px; }
+.flow-step .desc{ color:#444; }
+.flow-step .note{ color:#666; font-size:.95rem; margin-top:10px; }
+
+/* 텍스트 표 스타일 */
+.mix-guide{
+  list-style:none;border:1px dashed #f0c96b;border-radius:12px;
+  padding:10px 12px;margin-top:8px;
+}
+.mix-guide li{
+  display:flex;justify-content:space-between;gap:12px;
+  padding:6px 0;border-bottom:1px dashed #f3e0ab;
+}
+.mix-guide li:last-child{ border-bottom:0; }
+.mix-guide b{ font-weight:700; }
+/* ── Desktop에서 Step2 표(가이드) 슬림하게 ─────────────────────────── */
+@media (min-width: 981px){
+  /* 전체 흐름 카드 폭을 더 좁게 */
+  .flow{
+    max-width: 640px;             /* 760px → 640px */
+  }
+
+  /* Step 카드 여백 살짝 줄이기 */
+  .flow-step{
+    padding: 16px 18px;
+  }
+
+  /* 가이드 표 자체를 더 좁게 + 중앙정렬 */
+  .mix-guide{
+    max-width: 300px;              /* 표 몸통 폭 */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 8px 10px;
+    border-radius: 10px;
+  }
+
+  /* 행 높이와 타이포를 살짝 컴팩트하게 */
+  .mix-guide li{
+    padding: 8px 10px;             /* 6px → 8px */
+    font-size: 0.98rem;
+  }
+
+  /* 좌우 칼럼 비율 고정(레이블/값) */
+  .mix-guide li > b{               /* 왼쪽: 피부타입 */
+    flex: 0 0 46%;
+  }
+  .mix-guide li > span{            /* 오른쪽: 비율 */
+    flex: 0 0 54%;
+    text-align: right;
+  }
+}
+/* =========================
+   Contact Page
+========================= */
+.contact-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 60px 0;
+}
+
+.contact-info ul {
+  list-style: none;
+  margin-top: 12px;
+}
+.contact-info li {
+  margin: 8px 0;
+  font-size: 1rem;
+}
+.contact-info a {
+  color: #FFC21A;
+  text-decoration: none;
+}
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.contact-form label {
+  font-weight: 600;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+.contact-form button {
+  background: #FFC21A;
+  color: #000;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.contact-form button:hover {
+  background: #e0aa00;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .contact-wrap {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+.contact-wrap {
+  display: flex;
+  justify-content: center;
+  padding: 60px 0;
+}
+
+.contact-info {
+  max-width: 600px;
+}
+
+.contact-info h3 {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+}
+
+.contact-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 20px;
+}
+
+.contact-list li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #444;
+}
+
+.contact-list strong {
+  color: #000;
+  margin-right: 6px;
+}
+
+.contact-list a {
+  color: #FFC21A;
+  text-decoration: none;
+}
+
+.contact-list a:hover {
+  text-decoration: underline;
+}
